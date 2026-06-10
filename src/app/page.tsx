@@ -2,14 +2,16 @@
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import ReactLenis from "lenis/react";
-import ContactSplitForm from '@/components/sections/contact/ContactSplitForm';
-import FaqSplitMedia from '@/components/sections/faq/FaqSplitMedia';
-import FeatureCardTwentyThree from '@/components/sections/feature/FeatureCardTwentyThree';
-import FooterBaseReveal from '@/components/sections/footer/FooterBaseReveal';
-import HeroBillboardScroll from '@/components/sections/hero/HeroBillboardScroll';
-import NavbarStyleApple from '@/components/navbar/NavbarStyleApple/NavbarStyleApple';
-import TestimonialCardTwelve from '@/components/sections/testimonial/TestimonialCardTwelve';
-import TextSplitAbout from '@/components/sections/about/TextSplitAbout';
+import BlogCardTwo from "@/components/sections/blog/BlogCardTwo";
+import PricingCardThree from "@/components/sections/pricing/PricingCardThree";
+import ContactSplitForm from "@/components/sections/contact/ContactSplitForm";
+import FaqSplitMedia from "@/components/sections/faq/FaqSplitMedia";
+import FeatureCardTwentyThree from "@/components/sections/feature/FeatureCardTwentyThree";
+import FooterBaseReveal from "@/components/sections/footer/FooterBaseReveal";
+import HeroBillboardScroll from "@/components/sections/hero/HeroBillboardScroll";
+import NavbarStyleApple from "@/components/navbar/NavbarStyleApple/NavbarStyleApple";
+import TestimonialCardTwelve from "@/components/sections/testimonial/TestimonialCardTwelve";
+import TextSplitAbout from "@/components/sections/about/TextSplitAbout";
 
 export default function LandingPage() {
   return (
@@ -36,7 +38,11 @@ export default function LandingPage() {
         {
           name: "Features",          id: "#features"},
         {
+          name: "Pricing",          id: "#pricing"},
+        {
           name: "Testimonials",          id: "#testimonials"},
+        {
+          name: "Blog",          id: "#blog"},
         {
           name: "FAQ",          id: "#faq"},
         {
@@ -139,6 +145,51 @@ export default function LandingPage() {
     />
   </div>
 
+  <div id="pricing" data-section="pricing">
+    <PricingCardThree
+      animationType="slide-up"
+      textboxLayout="default"
+      useInvertedBackground={false}
+      title="Flexible Plans for Every Movie Lover"
+      description="Choose the perfect RonSpoilerShield plan to enhance your film experience without compromise."
+      plans={[
+        {
+          id: "basic",          badge: "Starter",          price: "$0",          name: "Free",          buttons: [{ text: "Get Started", href: "#" }],
+          features: ["Limited Daily Queries", "Basic Spoiler Protection", "Ad-Supported"]
+        },
+        {
+          id: "pro",          badge: "Most Popular",          price: "$9.99/month",          name: "Pro",          buttons: [{ text: "Choose Pro", href: "#" }],
+          features: ["Unlimited Queries", "Advanced Spoiler Protection", "Ad-Free Experience", "Priority Support", "Interactive Timeline Access"]
+        },
+        {
+          id: "premium",          badge: "Ultimate",          price: "$19.99/month",          name: "Premium",          buttons: [{ text: "Choose Premium", href: "#" }],
+          features: ["All Pro Features", "Early Access to New Features", "Offline Mode", "Dedicated Account Manager"]
+        }
+      ]}
+    />
+  </div>
+
+  <div id="blog" data-section="blog">
+    <BlogCardTwo
+      animationType="slide-up"
+      textboxLayout="default"
+      useInvertedBackground={true}
+      title="Latest Insights & Updates"
+      description="Stay informed with our blog posts on cinematic discovery, AI advancements, and RonSpoilerShield news."
+      blogs={[
+        {
+          id: "blog1",          category: "AI Technology",          title: "How AI Protects Your Movie Experience",          excerpt: "Explore the sophisticated algorithms behind RonSpoilerShield's spoiler detection and prevention system.",          imageSrc: "http://img.b2bpic.net/free-photo/view-futuristic-technology-element-with-abstract-design_23-2150917223.jpg",          imageAlt: "Abstract AI neural network",          authorName: "Ron Spoiler",          authorAvatar: "http://img.b2bpic.net/free-photo/cyberpunk-male-portrait_23-2151121096.jpg",          date: "July 15, 2024"
+        },
+        {
+          id: "blog2",          category: "Movie Reviews",          title: "Unraveling the Mysteries of 'Dune: Part Two' (Spoiler-Free)",          excerpt: "A deep dive into the world of Arrakis, analyzing themes and character arcs without revealing major plot points.",          imageSrc: "http://img.b2bpic.net/free-photo/glowing-blue-light-illuminates-desert-tent-at-night_23-2151478170.jpg",          imageAlt: "Desert landscape with a tent glowing blue",          authorName: "Cine Critic",          authorAvatar: "http://img.b2bpic.net/free-photo/headshot-pleased-dark-skinned-male-with-beard-wearing-formal-attire-looking-camera_273609-5606.jpg",          date: "July 10, 2024"
+        },
+        {
+          id: "blog3",          category: "Product Updates",          title: "New Feature: Interactive Timeline for Deeper Dives",          excerpt: "Introducing our latest feature that allows you to jump to specific points in a film for instant, contextual answers.",          imageSrc: "http://img.b2bpic.net/free-photo/film-reel-projector_23-2148720892.jpg",          imageAlt: "Vintage film reel",          authorName: "Ron Team",          authorAvatar: "http://img.b2bpic.net/free-photo/smiling-young-man-with-crossed-arms_23-2148112832.jpg",          date: "July 5, 2024"
+        }
+      ]}
+    />
+  </div>
+
   <div id="faq" data-section="faq">
       <FaqSplitMedia
       textboxLayout="default"
@@ -199,6 +250,8 @@ export default function LandingPage() {
             {
               label: "Features",              href: "#features"},
             {
+              label: "Pricing",              href: "#pricing"},
+            {
               label: "Testimonials",              href: "#testimonials"},
           ],
         },
@@ -207,7 +260,7 @@ export default function LandingPage() {
             {
               label: "About Us",              href: "#about"},
             {
-              label: "Blog",              href: "#"},
+              label: "Blog",              href: "#blog"},
             {
               label: "Careers",              href: "#"},
           ],
