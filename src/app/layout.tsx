@@ -11,7 +11,7 @@ import { Lato } from "next/font/google";
 
 
 export const metadata: Metadata = {
-  title: 'CineIQ - Your Spoiler-Free Movie Q&A AI',
+  title: 'RonSpoilerShield - Your Spoiler-Free Movie Q&A AI',
   description: 'Ask questions about any movie without spoilers. Our AI intelligently answers based on your current watch time, ensuring a perfect, unruined viewing experience.',
   keywords: ["movie Q&A, AI, spoiler-free, film companion, cinematic insights, watch time, movie assistant, plot details"],
   openGraph: {
